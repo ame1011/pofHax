@@ -1,0 +1,148 @@
+<h1 style='color:#333'>Settings</h1>
+<hr style='width:60%;text-align:left;float:left;' />
+<br /><br /><br />
+<div>
+	<h2 style='color:#09F'>Tags</h2>
+	<table style='border:none;padding:0;cell-spacing:0;cell-padding:0;margin:0'>
+    	<tr>
+        	<td style='vertical-align:top;padding-right:50px;'>
+            	<h3>Add New Tag</h3><br/>
+                <form id='addTagForm' action="#">
+                <table>
+                    <tr><td><label for='ptagName'>Tag Name</label></td><td><input id='ptagName' type='text' style='width:100px;' /></td></tr>
+                    <tr><td><label for='ptagShortcutKey'>Shortcut Key</label></td>
+                    <td>
+                        <select id='ptagShortcutKey'>
+                            <option value='-1'>&nbsp;</option>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5</option>
+                            <option value='6'>6</option>
+                            <option value='7'>7</option>
+                            <option value='8'>8</option>
+                            <option value='9'>9</option>
+                            <option value='0'>0</option>
+                            <option value='-'>-</option>
+                            <option value='='>=</option>
+                        </select>
+                    </td></tr>
+                    <tr><td><label for='ptagBgColor'>Bg Color</label></td><td><input class='color1' id='ptagBgColor' value='#33cc33'/></td></tr>
+                    <tr><td><label for='ptagTxtColor'>Text Color</label></td><td><input class='color2' id='ptagTxtColor' value='#000000'/></td></tr>
+                    <tr><td><label for='ptagBorderColor'>Border Color</label></td><td><input class='color3' id='ptagBorderColor' value='#336600'/></td></tr>
+                    <tr><td>Tag Preview</td><td id='ptagPreview' style='padding-top:5px;padding-left:2px;'><span style='padding:3px;font-weight:bold;'></span></td></tr>
+                    <tr><td><input type='submit' value='Add Tag' /></td></tr>
+            	</table>
+                </form>
+            </td>
+            <td style='vertical-align:top;width:320px;'>
+            	<h3>Tag List</h3><br/>
+                <table id='tableTagList'>
+                </table>
+            </td>
+            <td id='editTagCell' style='vertical-align:top;display:none;'>
+            	<h3 id='qtitle'>Edit Existing Tag</h3><br/>
+                <form id='editTagForm' action="#">
+                <input type='hidden' id='qtagId' value='-1' />
+                <table>
+                    <tr><td><label for='qtagName'>Tag Name</label></td><td><input id='qtagName' type='text' style='width:100px;' /></td></tr>
+                    <tr><td><label for='qtagShortcutKey'>Shortcut Key</label></td>
+                    <td>
+                        <select id='qtagShortcutKey'>
+                            <option value='-1'>&nbsp;</option>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                            <option value='3'>3</option>
+                            <option value='4'>4</option>
+                            <option value='5'>5</option>
+                            <option value='6'>6</option>
+                            <option value='7'>7</option>
+                            <option value='8'>8</option>
+                            <option value='9'>9</option>
+                            <option value='0'>0</option>
+                            <option value='-'>-</option>
+                            <option value='='>=</option>
+                        </select>
+                    </td></tr>
+                    <tr><td><label for='qtagBgColor'>Bg Color</label></td><td><input class='color1' id='qtagBgColor' value='#33cc33'/></td></tr>
+                    <tr><td><label for='qtagTxtColor'>Text Color</label></td><td><input class='color2' id='qtagTxtColor' value='#000000'/></td></tr>
+                    <tr><td><label for='qtagBorderColor'>Border Color</label></td><td><input class='color3' id='qtagBorderColor' value='#336600'/></td></tr>
+                    <tr><td colspan='2'><input type='button' value='Cancel Edit' id='qtagCancel' /><input type='submit' value='Save Changes' /></td></tr>
+            	</table>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <h2 style='color:#09F;margin-top:20px;'>List Options</h2>
+    <table style='border:none;padding:0;cell-spacing:0;cell-padding:0;margin:0'>
+    	<tr>
+        	<td>
+            	<h3>General Settings</h3><br/>
+                <table>
+                	<tr>
+                    	<td>My Location:</td>
+                        <td>
+                        	<input type='text' id='myLoc' />
+                        </td>
+                    </tr>
+                	<tr>
+                    	<td>Sort Profiles By:</td>
+                        <td>
+                        	<select id='profileSortSelector'>
+                            	<option value='default'>First Seen</option>
+                                <option value='last_online'>Last Online</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td>Hide Profile Page Excess?</td>
+                        <td><input id='hideX' type='checkbox' /></td>
+                    </tr>
+                    <tr>
+                    	<td>Profile Page GoToNext?</td>
+                        <td><input id='goToNext' type='checkbox' /></td>
+                    </tr>
+                </table>
+            </td>
+            <td style='vertical-align:top;padding-left:55px;padding-right:55px;'>
+            	<h3>LastOnline Settings</h3><br/>
+                <table>
+                	<tr>
+                    	<td># of Pages to Download</td>
+                        <td>
+                        	<select id='lastOnlineNumPagesToDownload'>
+                            	<option value='1'>1</option>
+                                <option value='5'>5</option>
+                                <option value='10'>10</option>
+                                <option value='20'>20</option>
+                                <option value='50'>50</option>
+                                <option value='100'>100</option>
+                                <option value='200'>200</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style='vertical-align:top;'>
+            	<h3>AdvancedSearch Settings</h3><br/>
+                <table>
+                	<tr>
+                    	<td># of Pages to Download</td>
+                        <td>
+                        	<select id='advancedSearchNumPagesToDownload'>
+                            	<option value='1'>1</option>
+                                <option value='5'>5</option>
+                                <option value='10'>10</option>
+                                <option value='20'>20</option>
+                                <option value='50'>50</option>
+                                <option value='100'>100</option>
+                                <option value='200'>200</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
